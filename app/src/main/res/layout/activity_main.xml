@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.alin_.lectures.MainActivity">
+    <data>
+        <variable
+            name="user"
+            type="com.example.alin_.lectures.User"/>
+        <variable
+            name="clickHandler"
+            type="com.example.alin_.lectures.MainActivity"/>
+    </data>
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_FirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/activity_main_margin_end"
+        android:layout_marginStart="@dimen/activity_main_margin_start"
+        android:layout_marginTop="@dimen/activity_main_margin_top"
+        android:text="@={user.firstName}"
+        android:hint="@string/firstName"
+        android:maxLines="1"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_LastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_main_margin_bottom"
+        android:layout_marginEnd="@dimen/activity_main_margin_end"
+        android:layout_marginStart="@dimen/activity_main_margin_start"
+        android:layout_marginTop="@dimen/activity_main_margin_top"
+        android:maxLines="1"
+        android:text="@={user.lastName}"
+        android:hint="@string/lastName"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_FirstName"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <TextView
+        android:id="@+id/tv_FirstNameHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/activity_main_margin_end"
+        android:layout_marginStart="@dimen/activity_main_margin_start"
+        android:layout_marginTop="@dimen/activity_main_tv_FirstNameHint_marginTop"
+        android:text="@string/firstName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_LastName" />
+
+    <TextView
+        android:id="@+id/tv_LastNameHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_main_margin_bottom"
+        android:layout_marginEnd="@dimen/activity_main_margin_end"
+        android:layout_marginStart="@dimen/activity_main_margin_start"
+        android:layout_marginTop="@dimen/activity_main_tv_LastNameHint_height"
+        android:text="@string/lastName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_FirstNameHint"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <TextView
+        android:id="@+id/tv_FirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_main_margin_bottom"
+        android:layout_marginEnd="@dimen/activity_main_margin_end"
+        android:layout_marginStart="@dimen/activity_main_margin_start"
+        android:layout_marginTop="@dimen/activity_main_margin_top"
+        android:text="@{user.firstName}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_LastName"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <TextView
+        android:id="@+id/tv_LastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_main_margin_bottom"
+        android:layout_marginEnd="@dimen/activity_main_margin_end"
+        android:layout_marginStart="@dimen/activity_main_margin_start"
+        android:layout_marginTop="@dimen/activity_main_margin_top"
+        android:text="@{user.lastName}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_FirstName"
+        app:layout_constraintVertical_bias="0.173" />
+
+
+</android.support.constraint.ConstraintLayout>
+</layout>

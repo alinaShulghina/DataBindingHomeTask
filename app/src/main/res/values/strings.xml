@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lectures</string>
+    <string name = "firstName">FirstName</string>
+    <string name="lastName">LastName</string>
+</resources>
